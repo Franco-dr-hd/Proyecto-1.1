@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductoModule } from './producto.module';
 import { AccesoriosComponent } from './accesorios/accesorios.component';
 import { GomasComponent } from './gomas/gomas.component';
+import { RemerasComponent } from './remeras/remeras.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,9 @@ const routes: Routes = [
     path:"maderas",component:GomasComponent
   },
 
-  
+  {
+    path:"remeras",component:RemerasComponent
+  }
 ];
 
 @NgModule({
