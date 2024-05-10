@@ -10,6 +10,10 @@ const routes: Routes = [
   // Carga PEREZOSA -> ruta que te lleva a un módulo específico 
   {
     path: "", loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)
+  },
+
+  {
+    path: "", loadChildren:() => import('./modules/producto/producto.module').then(m => m.ProductoModule)
   }
   // loadchildren: indica que habrá una ruta hija
   // ()=> import: funcion flecha que importa desde la ruta
