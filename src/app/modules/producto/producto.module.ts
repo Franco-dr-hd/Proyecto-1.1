@@ -18,6 +18,15 @@ import { AccesoriosComponent } from './accesorios/accesorios.component';
   imports: [
     CommonModule,
     ProductoRoutingModule
-  ]
+  ],
+exports:[
+  
+  MaderasComponent,
+  GomasComponent,
+  RemerasComponent,
+  AccesoriosComponent
+]
+
+
 })
 export class ProductoModule { }
