@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>TDM DR</span>
+  <button mat-button routerLink="/inicio">Inicio</button>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/productos">Productos</button>
+    <button mat-menu-item routerLink="/accesorios">Accesorios</button>
+    <button mat-menu-item routerLink="/gomas">Gomas</button>
+    <button mat-menu-item routerLink="/maderas">Maderas</button>
+    <button mat-menu-item routerLink="/remeras">Remeras</button>
+  </mat-menu>
+
+  <span class="example-spacer"></span>
+
+  <button mat-button routerLink="/inicio">Inicio</button>
+  <button mat-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
+  <mat-menu #usuario="matMenu">
+    <button mat-menu-item routerLink="/">Registrarse</button>
+    <button mat-menu-item routerLink="/">Iniciar Sesion</button>
+  </mat-menu>
+
+
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+</mat-toolbar>
