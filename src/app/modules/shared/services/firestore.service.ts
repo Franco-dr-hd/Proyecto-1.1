@@ -18,4 +18,23 @@ private usuarioCollection: AngularFirestoreCollection<Usuario>
   constructor(private database: AngularFirestore) {
     this.usuarioCollection = this.database.collection<Usuario>('usuarios');
    }
-}
+
+   agregarUsuario(Usuario: Usuario, id: string) {
+
+    return new Promise(async (resolve,reject) => {
+      try{
+        Usuario.uid = id;
+
+        /**
+         * const resultado = coleccion de usuaurios, envia como documento el UID
+         * y setea la informacion que ingresemos en el REGISTRO
+         */
+        const resultado = await this.usuarioCollection.doc(id).set(Usuario);
+        resolve(resultado)
+        //bloque CATCH encapsula una falla y la vuelve un error
+      }catch(error){
+        reject (error);
+      }
+      })
+    }
+  }
