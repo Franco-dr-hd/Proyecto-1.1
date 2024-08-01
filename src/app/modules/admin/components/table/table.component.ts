@@ -11,7 +11,7 @@ export class TableComponent {
 // Crear coleccion de productos del tipo producto -> lo definimos como un array
 coleccionProductos: Producto[] = [];
 //Definimos formulario para los productos
-/** Atributos alfanumericos (string) se inicializan con comillas simples
+/** Atributos alfanuméricos (string) se inicializan con comillas simples
  * Atributos númericos (number) se inicializan con cero ('0')
  */
 
